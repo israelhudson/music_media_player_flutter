@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_media_player_flutter/view/HomeScreen.dart';
+import 'package:music_media_player_flutter/app/app_module.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-void main() => runApp(
-    MaterialApp(
-      home:HomeScreen(),
-      debugShowCheckedModeBanner: false,
-    )
-);
+void main() => runApp(ModularApp(module: AppModule()));
