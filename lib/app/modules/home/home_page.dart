@@ -30,7 +30,8 @@ class _HomePageState extends State<HomePage> {
         itemBuilder: (_, index){
           return ListTile(
             title: Text(appModule.pessoas[index] + "fdsfsdf"),
-            onTap: ()=>Navigator.pushNamed(context, 'details/$index'),
+            //onTap: ()=>Navigator.pushNamed(context, 'details/$index'),
+            onTap: ()=>Navigator.pushNamed(context, 'player'),
           );
         },
       ),

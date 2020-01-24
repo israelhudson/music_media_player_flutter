@@ -21,6 +21,8 @@ dependencies:
   flutter_mobx: ^0.3.6
   mobx: ^0.4.0+1
   flutter_modular: ^0.2.1
+  cloud_audio_player: ^0.0.2
+
   flutter:
     sdk: flutter
 
@@ -50,6 +52,8 @@ flutter:
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
+  assets:
+    - assets/audios/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -76,3 +80,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
+scripts:
+  mobx: flutter pub run build_runner watch --delete-conflicting-outputs
