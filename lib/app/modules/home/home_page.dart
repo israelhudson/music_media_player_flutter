@@ -18,15 +18,18 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    double altura = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title + "${altura}"),
       ),
       body: ListView.builder(
         itemCount: appModule.pessoas.length,
         itemBuilder: (_, index){
           return ListTile(
-            title: Text(appModule.pessoas[index]),
+            title: Text(appModule.pessoas[index] + "fdsfsdf"),
             onTap: ()=>Navigator.pushNamed(context, 'details/$index'),
           );
         },

@@ -16,7 +16,9 @@ class HomeModule extends ChildModule {
         Router('/', child: (_, args) => HomePage()),
         Router('/details/:id', child: (_, args) => DetailsPage(
           id: args.params['id'],
-        )),
+        ),
+          transition: TransitionType.rightToLeftWithFade
+        ),
       ];
 
   static Inject get to => Inject<HomeModule>.of();
